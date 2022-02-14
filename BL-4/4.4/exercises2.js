@@ -12,3 +12,22 @@ function is_palindrome(word) {
 }
 
 console.log(is_palindrome('arara'));
+
+// Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+
+function find_bigger(numbers) {
+  bigger = numbers[0];
+  position = undefined;
+
+  for (number in numbers) {
+    if (numbers[number] > bigger) {
+      bigger = number;
+    }
+  }
+
+  position = numbers.indexOf(bigger);
+
+  return bigger;
+}
+
+console.log(find_bigger([2, 3, 6, 7, 10, 1]));
