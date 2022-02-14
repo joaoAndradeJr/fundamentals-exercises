@@ -3,18 +3,18 @@ function sum(a, b) {
   return a + b;
 }
 
-// 2
+// 1.2
 function sub(a, b) {
   return a - b;
 }
 
-// 3
+// 1.3
 
 function mul(a, b) {
   return a * b;
 }
 
-// 4
+// 1.4
 function div(a, b) {
   if (a <= 0) {
     return "Não pode dividir por 0";
@@ -23,7 +23,7 @@ function div(a, b) {
   }
 }
 
-// 5
+// 1.5
 function mod(a, b) {
   if (a <= 0) {
     return "Não pode dividir por 0";
@@ -31,3 +31,37 @@ function mod(a, b) {
     return a % b;
   }
 }
+
+// 2
+function bigger(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+// 3
+function bigger_from_three(a, b, c) {
+  if (a > b && a > c) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
+}
+
+// 4
+
+function positive_negative_zero(a) {
+  if (a > 0) {
+    return 'positive';
+  } else if (a < 0) {
+    return 'negative';
+  } else {
+    return 0;
+  }
+}
+
+
