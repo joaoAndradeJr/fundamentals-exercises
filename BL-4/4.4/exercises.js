@@ -22,3 +22,18 @@ function add_key_and_value(key, value) {
   
   console.log(info);
 }
+
+// 3 - Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+/*
+personagem
+origem
+nota
+recorrente
+*/
+function show_keys() {
+  for (key in info) {
+    console.log(key)
+  }
+}
+
+show_keys()
