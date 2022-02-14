@@ -108,4 +108,3 @@ function div() {
     console.log(array[i] / 2);
   }
 }
- div()
