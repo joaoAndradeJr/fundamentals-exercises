@@ -83,4 +83,27 @@ function triangle(a, b, c) {
   }
 }
 
+// 6
+
+function chess_moves(word) {
+  lc_word = word.toLowerCase();
+  
+  switch (lc_word) {
+  case 'king':
+    return 'Kings move one square in any direction, so long as that square is not attacked by an enemy piece. Additionally, kings are able to make a special move, known as castling.';
+  case 'queen':
+    return 'Queens move diagonally, horizontally, or vertically any number of squares. They are unable to jump over pieces.';
+  case 'Rook':
+    return 'Rooks move horizontally or vertically any number of squares. They are unable to jump over pieces. Rooks move when the king castles.';
+  case 'Bishop':
+    return 'Bishops move diagonally any number of squares. They are unable to jump over pieces.';
+  case 'Knight':
+    return 'Knights move in an ‘L’ shape’: two squares in a horizontal or vertical direction, then move one square horizontally or vertically. They are the only piece able to jump over other pieces.';
+  case 'Pawn':
+    return 'Pawns move vertically forward one square, with the option to move two squares if they have not yet moved. Pawns are the only piece to capture different to how they move. The pawns capture one square diagonally in a forward direction. Pawns are unable to move backward on captures or moves. Upon reaching the other side of the board a pawn promotes into any other piece, except for a king. Additionally, pawns can make a special move named En Passant.';
+  default:
+    return 'Invalid';
+  }
+}
+
 
