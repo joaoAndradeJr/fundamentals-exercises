@@ -64,4 +64,23 @@ function positive_negative_zero(a) {
   }
 }
 
+// 5
+
+function triangle(a, b, c) {
+  if (a < 0 || b < 0 || c < 0) {
+    return 'Inválido';
+  }
+
+  aux = a * b;
+  if (aux == (b * c) && aux == (a * c)) {
+    return true;
+  } else if (aux != (b * c) && aux != (a * c)) {
+    return true;
+  } else if (aux == (a * c)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
