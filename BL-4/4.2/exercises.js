@@ -83,3 +83,28 @@ function lower_number() {
 
   console.log(actual);
 }
+
+// 8
+function print_from_1_to_25() {
+  let array = [];
+  
+  for (let i = 1; i < 26; i += 1) {
+    array.push(i);
+  }
+
+  for (let i = 0; i < array.length; i += 1) {
+    console.log(array[i]);
+  }
+}
+
+function div() {
+  let array = [];
+  
+  for (let i = 1; i < 26; i += 1) {
+    array.push(i);
+  }
+
+  for (let i = 0; i < array.length; i += 1) {
+    console.log(array[i] / 2);
+  }
+}
