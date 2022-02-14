@@ -106,4 +106,40 @@ function chess_moves(word) {
   }
 }
 
+// 7
+function score(num) {
+  if (num < 0 || num > 100) {
+    return 'Inválido';
+  }
+  if (num >= 90) {
+    return 'A';
+  } else if (num >= 80) {
+    return 'B';
+  } else if (num >= 70) {
+    return 'C';
+  } else if (num >= 60) {
+    return 'D';
+  } else if (num >= 50) {
+    return 'E';
+  } else {
+    return 'F';
+  }
+}
 
+// 8
+function have_even_number(a, b, c) {
+  if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// 9
+function have_odd_number(a, b, c) {
+  if (a % 2 != 0 || b % 2 != 0 || c % 2 != 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
