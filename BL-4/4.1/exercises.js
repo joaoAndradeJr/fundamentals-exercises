@@ -143,3 +143,42 @@ function have_odd_number(a, b, c) {
     return false;
   }
 }
+
+// 10
+function get_profit(cost, sell) {
+  if (cost < 0 || sell < 0) {
+    return 'Invalid';
+  }
+  
+  final_cost = cost + (cost + 0.2);
+  profit = sell - final_cost; 
+
+  return profit * 1000;
+}
+
+// 11
+function calculate_irpf(salary) {
+  base_salary = undefined;
+
+  if (salary <= 1556.94) {
+    base_salary = salary - (salary * 0.08);
+  } else if (salary <= 2594.92) {
+    base_salary = salary - (salary * 0.09);
+  } else if (salary <= 5189.82) {
+    base_salary = salary - (salary * 0.11);
+  } else {
+    base_salary = salary - 570.88;
+  }
+
+  if (base_salary < 1903.99) {
+    return base_salary;
+  } else if (base_salary <= 2826.65) {
+    return (base_salary - (base_salary * 0.075) + 142.80).toFixed(2);
+  } else if (base_salary <= 3751.05) {
+    return (base_salary - (base_salary * 0.15) + 354.80).toFixed(2);
+  } else if (base_salary <= 4664.68) {
+    return (base_salary - (base_salary * 0.225) + 636.13).toFixed(2);
+  } else {
+    return (base_salary - (base_salary * 0.275) + 869.36).toFixed(2);
+  }
+}
