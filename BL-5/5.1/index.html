@@ -70,6 +70,9 @@
       document.getElementsByTagName('p')[0].innerText = capsText;
 
       // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      for (let i = 0; i < document.getElementsByTagName('p').length; i += 1) {
+        console.log(document.getElementsByTagName('p')[i].innerText);
+      }
     </script>
   </body>
 </html>
