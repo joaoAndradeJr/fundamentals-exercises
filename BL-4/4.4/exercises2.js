@@ -89,3 +89,38 @@ function most_repeated(numbers) {
 }
 
 console.log(most_repeated([2, 3, 2, 5, 8, 2, 3]));
+
+// 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+
+function sum_n(n) {
+  sum = 0;
+  index = 1;
+
+  for (let i = 0; i < n; i += 1) {
+    sum += index;
+    index += 1;
+  }
+
+  return sum;
+}
+
+console.log(sum_n(5));
+
+/*
+7 - Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+Valor de teste: 'trybe' e 'be'
+Valor esperado no retorno da função: true
+*/
+
+function compare_final(word, ending) {
+  let substring_word = word.substring(word.length - ending.length);
+  
+  if (substring_word === ending) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(compare_final('trybe', 'be'));
