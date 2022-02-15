@@ -73,6 +73,10 @@
       h1.innerText = 'Exercício 5.2 - JavaScript DOM'
       document.body.appendChild(h1);
 
+      const main = document.createElement('main');
+      main.setAttribute('class', 'main-content');
+      document.getElementsByTagName('h1')[0].appendChild(main);
+
     </script>
   </body>
 </html>
