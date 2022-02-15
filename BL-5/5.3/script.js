@@ -38,3 +38,15 @@ function createDays() {
 }
 
 createDays();
+
+function holidayButtom(str) {
+  const holidayBtn = document.createElement('button');
+  holidayBtn.setAttribute('id', 'btn-holiday');
+  holidayBtn.innerText = str;
+
+  const btnContainer = document.getElementsByClassName('buttons-container')[0];
+  
+  btnContainer.appendChild(holidayBtn);
+}
+
+holidayButtom('Feriados');
