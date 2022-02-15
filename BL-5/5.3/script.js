@@ -50,3 +50,21 @@ function holidayButtom(str) {
 }
 
 holidayButtom('Feriados');
+
+function changeHolidayBackground() {
+  const btn = document.getElementById('btn-holiday');
+  const holidays = document.getElementsByClassName('holiday');
+
+  btn.addEventListener('click', () => {
+    for (let i = 0; i < holidays.length; i += 1) {
+      if (holidays[i].style.backgroundColor === 'red') {
+        holidays[i].style.backgroundColor = 'rgb(238, 238, 238)';
+      } else {
+        holidays[i].style.backgroundColor = 'red';
+      }
+      
+    }
+  });
+}
+
+changeHolidayBackground();
