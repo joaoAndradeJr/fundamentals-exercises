@@ -21,6 +21,16 @@ function createDays() {
   for (let i = 0; i < dezDaysList.length; i += 1) {
     const ulList = document.getElementById('days');
     const day = document.createElement('li');
+    day.setAttribute('class', 'day');
+
+    if (dezDaysList[i] === 24 || dezDaysList[i] === 25 || dezDaysList[i] === 31) {
+      day.setAttribute('class', 'day holiday');
+    }
+
+    if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25) {
+      day.setAttribute('class', 'day friday');
+    }
+
     day.innerHTML = dezDaysList[i];
 
     ulList.appendChild(day);
