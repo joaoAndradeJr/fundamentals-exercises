@@ -98,6 +98,16 @@
       img.setAttribute('class', 'small-image');
       document.getElementsByClassName('left-content')[0].appendChild(img);
 
+      const list = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      const setList = document.createElement('ul');
+      document.getElementsByClassName('right-content')[0].appendChild(setList);
+
+      for (let i = 0; i < 10; i += 1) {
+        const li = document.createElement('li');
+        li.innerText = list[i];
+        setList.appendChild(li);
+      }
+
     </script>
   </body>
 </html>
