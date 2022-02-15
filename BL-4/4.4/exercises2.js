@@ -60,3 +60,32 @@ function find_bigger_name(names) {
 }
 
 console.log(find_bigger_name(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+// 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+
+function most_repeated(numbers) {
+  let num = {};
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    let valor = numbers[index];
+    if (num[valor] === undefined) {
+      num[valor] = 1;
+    } else {
+      num[valor] = num[valor] + 1;
+    }
+  }
+
+  let contRepetido = 0;
+  let contNumero = 0;
+
+  for (let prop in num) {
+    if (contRepetido < num[prop]) {
+      contRepetido = num[prop];
+      contNumero = prop;
+    }
+  }
+
+  return contNumero;
+}
+
+console.log(most_repeated([2, 3, 2, 5, 8, 2, 3]));
