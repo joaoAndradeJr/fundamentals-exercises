@@ -68,3 +68,15 @@ function changeHolidayBackground() {
 }
 
 changeHolidayBackground();
+
+function fridayButtom(str) {
+  const holidayBtn = document.createElement('button');
+  holidayBtn.setAttribute('id', 'btn-friday');
+  holidayBtn.innerText = str;
+
+  const btnContainer = document.getElementsByClassName('buttons-container')[0];
+  
+  btnContainer.appendChild(holidayBtn);
+}
+
+fridayButtom('Sexta-feira');
