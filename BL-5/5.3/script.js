@@ -16,6 +16,16 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+const fridays = [];
+
+function saveFriday() {
+  const friday = document.getElementsByClassName('day friday');
+
+  for (let i = 0; i < friday.length; i += 1) {
+    fridays.push(friday[i].innerHTML);
+  }
+}
+
 function createDays() {  
   for (let i = 0; i < dezDaysList.length; i += 1) {
     const ulList = document.getElementById('days');
@@ -34,6 +44,7 @@ function createDays() {
 
     ulList.appendChild(day);
   }
+  saveFriday();
 }
 
 createDays();
@@ -88,11 +99,9 @@ function changefridayText() {
     for (let i = 0; i < friday.length; i += 1) {
       if (friday[i].className === 'day friday' && friday[i].innerHTML !== 'Dia de Maldade') {
         friday[i].innerHTML = 'Dia de Maldade';
+      } else {
+        friday[i].innerHTML = fridays[i];
       }
-      // else if (friday[i].className === 'day friday' && friday[i].innerHTML === 'Dia de Maldade') {
-      //   document.getElementById('days').innerHTML = '';
-      //   createDays();
-      // }
     }
   });
 }
