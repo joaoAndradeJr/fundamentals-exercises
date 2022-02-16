@@ -107,3 +107,11 @@ function changefridayText() {
 }
 
 changefridayText();
+
+function createTask(str) {
+  const div = document.getElementsByClassName('my-tasks')[0];
+  const newTask = document.createElement('span');
+  newTask.appendChild(str);
+
+  div.appendChild(newTask);
+}
