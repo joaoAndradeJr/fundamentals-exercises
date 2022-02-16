@@ -1,11 +1,14 @@
 const p = document.getElementsByClassName('square');
 
+const getFromLocalStorage = JSON.parse(localStorage.getItem('person'));
+console.log(getFromLocalStorage)
+
 for (let i = 0; i < p.length; i += 1) {
   p[i].addEventListener('click', () => {
     const attr = p[i].getAttribute('class');
     const color = attr.substring(7);
     const fontColor = getFontColor(color);
-    saveOnLocalStorage(color, fontColor);
+    saveOnLocalStorage(attr, fontColor);
     changePageColor(color, fontColor);
   });
 }
@@ -27,15 +30,9 @@ function getFontColor(color) {
 
 function saveOnLocalStorage(bgColor, color) {
   const personal = {
-    backGround: bgColor,
+    bodyClass: bgColor,
     fontColor: color, 
   }
 
   localStorage.setItem('person', JSON.stringify(personal));
 }
-
-
-// let personal = JSON.parse(localStorage.getItem('person'));
-
-// document.getElementsByClassName('body')[0].style.backgroundColor = personal.backgroundColor;
-// document.getElementsByClassName('body')[0].style.color = 'white';
