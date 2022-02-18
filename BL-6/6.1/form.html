@@ -42,14 +42,19 @@
     <fieldset>
       <label for="resumo">
         Resumo do Curriculo
-        <textarea maxlength="1000" required></textarea>
+        <textarea id="resumo" maxlength="1000" required></textarea>
       </label>
       <label for="cargo">
         Cargo:
         <input type="text" id="cargo" required maxlength="40" />
       </label>
+      <label for="desc-cargo">
+        Descrição do Cargo
+        <textarea id="desc-cargo" maxlength="500" required></textarea>
+      </label>
     </fieldset>
   </form>
+  <button type="submit" id="btn-enviar">Enviar</button>
   <script src="script.js"></script>
 </body>
 </html>
