@@ -29,7 +29,25 @@
         Cidade:
         <input type="text" id="cidade" required maxlength="28" />
       </label>
-      <select id="estados"></select>
+      <select id="estados" required></select>
+      <label for="casa">
+        Casa
+        <input type="radio" id="casa" name="moradia" required />
+      </label>
+      <label for="apto">
+        Apartamento
+        <input type="radio" id="apto" name="moradia" required />
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="resumo">
+        Resumo do Curriculo
+        <textarea maxlength="1000" required></textarea>
+      </label>
+      <label for="cargo">
+        Cargo:
+        <input type="text" id="cargo" required maxlength="40" />
+      </label>
     </fieldset>
   </form>
   <script src="script.js"></script>
