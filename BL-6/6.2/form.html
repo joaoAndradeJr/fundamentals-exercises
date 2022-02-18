@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <div class="mb-3">
+        <label for="name" class="form-label">
+          Nome:
+          <input type="text" class="form-control" id="name" required maxlength="40" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">
+          Email:
+          <input type="email" class="form-control" id="email" required maxlength="50" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="cpf" class="form-label">
+          CPF:
+          <input type="text" class="form-control" id="cpf" required maxlength="11" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="endereco" class="form-label">
+          Endereço:
+        <input type="text" class="form-control" id="endereco" required maxlength="200" />
+      </label>
+      </div>
+      <div class="mb-3">
+        <label for="cidade" class="form-label">
+          Cidade:
+          <input type="text" class="form-control" id="cidade" required maxlength="28" />
+        </label>
+      </div>
+      <select class="form-select" id="estados" required></select>
+      <div class="form-check">
+        <label for="casa" class="form-check-label">
+          Casa
+          <input class="form-check-input" type="radio" id="casa" name="moradia" required />
+        </label>
+      </div>
+      <div class="form-check">
+        <label for="apto" class="form-check-label">
+          Apartamento
+          <input class="form-check-input" type="radio" id="apto" name="moradia" required />
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="mb3">
+        <label for="resumo" class="input-text">
+          Resumo do Curriculo
+          <textarea class="form-control" id="resumo" maxlength="1000" required></textarea>
+        </label>
+      </div>
+      <div class="mb3">
+        <label for="cargo" class="input-text">
+          Cargo:
+          <input class="form-control" type="text" id="cargo" required maxlength="40" />
+        </label>
+      </div>
+      <div class="mb3">
+        <label for="desc-cargo" class="input-text">
+          Descrição do Cargo
+          <textarea class="form-control" id="desc-cargo" maxlength="500" required></textarea>
+        </label>
+      </div>
+      <div class="mb3">
+        <label for="inicio" class="input-text">
+          Data de Início
+          <input type="text" class="form-control" id="inicio" required />
+      </div>
+    </fieldset>
+  </form>
+  <button type="submit" class="btn btn-primary" id="btn-enviar">Enviar</button>
+  <script src="script.js"></script>
+</body>
+</html>
