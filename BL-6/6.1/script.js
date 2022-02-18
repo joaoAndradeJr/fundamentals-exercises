@@ -12,3 +12,10 @@ estados.forEach((estado) => {
   option.innerHTML = estado;
   selectEstados.appendChild(option);
 });
+
+const btnEnviar = document.getElementById('btn-enviar');
+btnEnviar.addEventListener('click', (event) => {
+  event.preventDefault();
+  const estado = document.getElementById('estados');
+  console.log(estado.value)
+});
