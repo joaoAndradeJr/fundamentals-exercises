@@ -7,4 +7,4 @@ const shuffleNumber = (number) => {
   return checkNumber(number, luckNumber);
 };
 
-console.log(shuffleNumber(3))
+console.log(shuffleNumber(3));
