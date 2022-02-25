@@ -26,3 +26,46 @@ const longestWord = (sentence) => {
 };
 
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
+
+/*
+  Função 1 : Escreva uma função que vai receber uma string como parâmetro. Sua função deverá procurar pela letra x em uma string qualquer que você determinar e substituir pela string que você passou como parâmetro. Sua função deve retornar essa nova string .
+  Exemplo:
+  String determinada: "Tryber x aqui!"
+  Parâmetro: "Bebeto"
+  Retorno: "Tryber Bebeto aqui!"
+*/
+
+const skills = ['HTML', 'Javascript', 'React', 'mongoDB', 'Redux'];
+
+const determinatedString = 'Tryber x aqui!';
+
+const replaceX = (str) => determinatedString.replace('x', str);
+
+/*
+  Função 2 : Escreva uma função que vai receber a string retornada da Função 1 como parâmetro. Essa função deve concatenar as skills do array global à string que foi passada para a Função 2 via parâmetro. Você deve ordenar os skills em ordem alfabética. Sua função deve retornar essa nova string .
+  Exemplo: "Tryber x aqui! Minhas cinco principais habilidades são:
+  JavaScript;
+  HTML; ... #goTrybe".
+*/
+
+function buildSkillsPhrase (paramOne) {
+
+  let result = `${replaceX(paramOne)}
+
+  Minhas cinco principais habilidades são:`;
+
+  skills.forEach((skill) =>
+  result = `${result}
+
+  - ${skill}`);
+
+  result = `
+  ${result}
+
+  #goTrybe
+  `;
+
+  return result;
+}
+
+console.log(buildSkillsPhrase('João'));
