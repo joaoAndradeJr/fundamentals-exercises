@@ -27,4 +27,8 @@ const addShift = (obj, key, value) => {
   return obj;
 };
 
-console.log(addShift(lesson2, 'turno', 'noite'))
+console.log(addShift(lesson2, 'turno', 'noite'));
+
+const showKeys = (obj) => Object.keys(obj);
+
+console.log(showKeys(lesson1));
