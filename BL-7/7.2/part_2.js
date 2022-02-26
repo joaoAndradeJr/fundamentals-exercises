@@ -32,3 +32,9 @@ console.log(addShift(lesson2, 'turno', 'noite'));
 const showKeys = (obj) => Object.keys(obj);
 
 console.log(showKeys(lesson1));
+
+// Crie uma função para mostrar o tamanho de um objeto.
+
+const objSize = obj => Object.keys(obj).length;
+
+console.log(objSize(lesson1))
