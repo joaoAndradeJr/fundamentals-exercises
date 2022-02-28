@@ -42,10 +42,7 @@ const dragonDamage = () => getRandomNumber(15, dragon.strength);
   O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
 */
 
-const warriorDamage = () => {
-  const maxValue = warrior.strength * warrior.weaponDmg;
-  return getRandomNumber(warrior.strength, maxValue);
-};
+const warriorDamage = () => getRandomNumber(warrior.strength, warrior.strength * warrior.weaponDmg);
 
 /*
   Crie uma função que retorna um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
@@ -54,8 +51,23 @@ const warriorDamage = () => {
 */
 
 const mageDamage = () => {
-  const maxValue = mage.intelligence * 2;
-  const damage = getRandomNumber(mage.intelligence, maxValue);
   if (mage.mana < 15) return { damage: 'Não possui mana suficiente', mana: mage.mana }; 
-  return { damage: damage, mana: mage.mana - 15 };
+  const totalDamage = getRandomNumber(mage.intelligence, mage.intelligence * 2);
+  return { damage: totalDamage, mana: mage.mana - 15 };
+};
+
+/*
+  Agora que você já possui a implementação das funções relativas aos três exercícios anteriores, passe-as como parâmetro para outras funções que irão compor um objeto gameActions . O objeto será composto por ações do jogo e cada ação é por denifição uma HOF , pois neste caso, são funções que recebem como parâmetro outra função.
+
+  1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior .
+
+  2 - Crie a segunda HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem mage . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor das chaves damage e mana do mage.
+*/
+
+const gameActions = {
+  warriorAction: (warriorDamage) => {
+    const damage = warriorDamage();
+    dragon.healthPoints -= damage;
+    warrior.damage = damage;
+  },
 };
