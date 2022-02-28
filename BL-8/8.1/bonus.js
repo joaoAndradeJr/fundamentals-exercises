@@ -37,4 +37,12 @@ const getRandomNumber = (minValue, maxValue) => {
 
 const dragonDamage = () => getRandomNumber(15, dragon.strength);
 
-console.log(dragonDamage());
+/*
+  Crie uma função que retorna o dano causado pelo warrior .
+  O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
+*/
+
+const warriorDamage = () => {
+  const maxValue = warrior.strength * warrior.weaponDmg;
+  return getRandomNumber(warrior.strength, maxValue);
+};
