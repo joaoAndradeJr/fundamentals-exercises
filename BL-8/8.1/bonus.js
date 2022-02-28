@@ -70,4 +70,10 @@ const gameActions = {
     dragon.healthPoints -= damage;
     warrior.damage = damage;
   },
+  mageAction: (mageDamage) => {
+    const damage = mageDamage();
+    dragon.healthPoints -= damage.damage;
+    mage.damage = damage.damage;
+    mage.mana -= damage.mana;
+  },
 };
