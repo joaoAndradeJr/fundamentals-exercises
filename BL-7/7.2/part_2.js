@@ -121,3 +121,5 @@ const checkPair = (obj, key, value) => {
 };
 
 console.log(checkPair(lesson2, 'professor', 'Carlos'));
+
+module.exports = assignObj;
